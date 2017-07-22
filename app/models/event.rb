@@ -37,6 +37,8 @@ class Event < ApplicationRecord
     end
   end
 
+  ###########################################
+
   def self.to_presenter(results)
     results.map{ |event| EventPresenter.new(event)}
   end
@@ -72,4 +74,7 @@ class Event < ApplicationRecord
   def self.sanitize_query(query)
     query.gsub(/\w*((\%27)|(\'))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/, '')
   end
+ 
+  ###############################################
+  
 end

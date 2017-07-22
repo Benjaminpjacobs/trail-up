@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true, unless: :login_meetup
   validates :username, presence: true, uniqueness: true, unless: :login_meetup
+
   validates :slug, uniqueness: true
 
   has_one :picture, as: :imageable, dependent: :destroy
@@ -32,10 +33,6 @@ class User < ApplicationRecord
 
   def generate_slug
     self.slug = username.parameterize if username
-  end
-
-  def partials
-    
   end
 
   def attending
@@ -64,7 +61,5 @@ class User < ApplicationRecord
       username: auth["info"]["name"],
       password: SecureRandom.hex(8)
     )
-  end
-
-    
+  end 
 end

@@ -1,4 +1,4 @@
-var trailSelect = function() {
+const trailSelect = function() {
     const select = document.getElementById('search_by')
     const dataList = document.getElementById('trails')
 

@@ -15,6 +15,9 @@ class User < ApplicationRecord
   has_many :event_roles, dependent: :destroy
   has_many :events, through: :event_roles
 
+  has_many :friendships
+  has_many :friends, through: :friendships, class_name: 'User', foreign_key: :friend_user_id
+
   accepts_nested_attributes_for :picture
 
   enum role: %w(admin)

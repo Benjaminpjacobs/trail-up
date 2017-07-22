@@ -48,6 +48,10 @@ Rails.application.routes.draw do
     get '/update-status', to: 'event_status#index'
     get '/fitbit_json/show', to: 'fitbit_json#show'
   end
+  namespace :users do
+    resources :friends, only: [:index]
+  end
+
 
 
   resources :users, only: [:create, :show, :edit, :update]

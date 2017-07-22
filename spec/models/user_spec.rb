@@ -9,4 +9,6 @@ RSpec.describe User, type: :model do
   it {should accept_nested_attributes_for(:picture)}
   it {should have_many(:event_roles)}
   it {should have_many(:events).through(:event_roles)}
+  it {should have_many(:friendships)}
+  it {should have_many(:friends).through(:friendships)}
 end

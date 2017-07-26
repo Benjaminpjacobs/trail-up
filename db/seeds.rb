@@ -104,6 +104,7 @@ class Seed
       password: 'password',
       role: 'admin'
     )
+    puts "#{admin.username} created!"
   end
 
   def generate_difficulties

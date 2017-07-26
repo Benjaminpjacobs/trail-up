@@ -8,11 +8,15 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true, unless: :login_meetup
   validates :username, presence: true, uniqueness: true, unless: :login_meetup
+
   validates :slug, uniqueness: true
 
   has_one :picture, as: :imageable, dependent: :destroy
   has_many :event_roles, dependent: :destroy
   has_many :events, through: :event_roles
+
+  has_many :friendships
+  has_many :friends, through: :friendships, class_name: 'User', foreign_key: :friend_user_id
 
   accepts_nested_attributes_for :picture
 
@@ -32,10 +36,6 @@ class User < ApplicationRecord
 
   def generate_slug
     self.slug = username.parameterize if username
-  end
-
-  def partials
-    
   end
 
   def attending
@@ -64,7 +64,5 @@ class User < ApplicationRecord
       username: auth["info"]["name"],
       password: SecureRandom.hex(8)
     )
-  end
-
-    
+  end 
 end

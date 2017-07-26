@@ -42,7 +42,7 @@ describe "users can see events and decide to join or not" do
     @event_roles_2 = EventRole.create!(user_id: @user_host.id, event_id: @event_2.id, role: 1)
   end
 
-  scenario "user can find events from the homepage and navigate to show page and join event" do
+  xscenario "user can find events from the homepage and navigate to show page and join event" do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     visit root_path
@@ -65,7 +65,7 @@ describe "users can see events and decide to join or not" do
     expect(page).to have_content("Leave Event")
   end
 
-  scenario "authenticated user tries to join event" do
+  xscenario "authenticated user tries to join event" do
     visit "/events/#{@event_1.id}"
 
     expect(page).to have_content("Login to join")
@@ -75,7 +75,7 @@ describe "users can see events and decide to join or not" do
     expect(current_path).to eq("/login")
   end
 
-  scenario "host sees delete event on event show page and can click it" do
+  xscenario "host sees delete event on event show page and can click it" do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_host)
     visit root_path
 
@@ -95,7 +95,7 @@ describe "users can see events and decide to join or not" do
     expect(current_path).to eq(root_path)
   end
 
-  scenario "user can leave event" do
+  xscenario "user can leave event" do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user_guest)
     visit "/events/#{@event_1.id}"
 

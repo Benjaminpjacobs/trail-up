@@ -1,32 +1,51 @@
 <div class='dashboard'>
-    <h3>Welcome <%=current_user.username%>'s Events</h3>
+    <h3>Welcome
+        <%=current_user.username%>
+    </h3>
 
     <div class='display'>
+        <aside class='friend-list'>
+            <h2>
+                Friends
+            </h2>
+            <% current_user.friends.limit(5).each do |friend| %>
+                <h4>
+                    <%= friend.username %>
+                </h4>
+                <%end%>
+                    <p>
+                        <%=link_to "All Friends...", users_friends_path%>
+                    </p>
+        </aside>
 
         <section class='events-container'>
             <div id='events'>
                 <% if @event_presenter.empty? %>
-                  <div class="no-events-message">You have not yet created any events or signed up to attend any events.</div>
-                <% end %>
-                <% @event_presenter.each do |event| %>
-                    <div class="event <%= event.get_identifiers %>">
-                        <%= link_to event.name, event_path(event.event_id) %>
-                            <div class="date">
-                                <%= event.date.strftime("%a %d %b %Y") %>
-                            </div>
-                    </div>
+                    <div class="no-events-message">You have not yet created any events or signed up to attend any events.</div>
                     <% end %>
+                        <% @event_presenter.each do |event| %>
+                            <div class="event <%= event.get_identifiers %>">
+                                <%= link_to event.name, event_path(event.event_id) %>
+                                    <div class="date">
+                                        <%= event.date.strftime("%a %d %b %Y") %>
+                                    </div>
+                            </div>
+                            <% end %>
             </div>
         </section>
+
         <aside class='event-filters'>
+            <h2>Event Filters</h2>
+            <div class="filter-divider"></div>
             <h4 id="upcoming" class="selected">Upcoming</h4>
             <h4 id="past">Past</h4>
             <div class="filter-divider"></div>
             <h4 id="attending">Attending</h4>
             <h4 id="hosting">Hosting</h4>
+            <div class="filter-divider"></div>
         </aside>
     </div>
 </div>
 
 <%=javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"%>
-<%= javascript_include_tag "dashboard/dashboard_filter" %>
+    <%= javascript_include_tag "dashboard/dashboard_filter" %>

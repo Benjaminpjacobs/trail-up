@@ -163,6 +163,7 @@ class Seed
 
   def most_active_user_events
     user = User.create!(username: "Mr. Popular", email: "mrpopular@gmail.com", password: "password")
+    make_friends(user)
     user_b = User.create!(username: "Mr. UnPopular", email: "mrunpopular@gmail.com", password: "password")
     5.times do |i|
       trail = Trail.order('Random()').first
@@ -178,6 +179,13 @@ class Seed
       EventRole.create(event_id: archived_guest_event.id, user_id: user.id, role: 1)
     end
   end
+
+  def make_friends(user)
+    20.times do |i|
+      user.friends << User.offset(i).first
+    end
+  end
+
 
   def latitude
     (37.74..40.74).step(0.01).to_a.sample

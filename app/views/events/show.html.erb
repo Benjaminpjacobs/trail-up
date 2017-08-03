@@ -12,8 +12,8 @@
             </h5>
             <p>
 
-                <% @event.hosts.each do |host| %>
-                    <%= host.username%>
+                <% @event.hosts.each do |role| %>
+                    <%= role.user.username%>
                         <%end%>
                             <h5>Event Description:</h5>
                             <p>

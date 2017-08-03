@@ -22,11 +22,11 @@ class Event < ApplicationRecord
   end
 
   def hosts
-    users.joins(:event_roles).where(event_roles: {role: "host"})
+    event_roles.includes(:user).where(role: 'host')
   end
 
   def guests
-    users.joins(:event_roles).where(event_roles: {role: "guest"})
+    event_roles.includes(:user).where(role: 'guest')
   end
 
   def user_status_change(params)

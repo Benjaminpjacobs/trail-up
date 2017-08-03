@@ -27,7 +27,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user.picture.update(pic_params[:image])
+    binding.pry
+    if current_user
+      current_user.remove_image!
+      Picture.create!(pic_params[:image].merge({imageable_id: current_user.id}))
       redirect_to user_path(current_user)
     else
       render :edit

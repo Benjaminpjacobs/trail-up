@@ -1,74 +1,115 @@
 .user-profile {
-    position: absolute;
+    // position: absolute;
+    // align-items: center;
+    // height: 100%;
+    // width: auto;
+    // left: 49%;
+    // top: 40%;
+    // margin-left: -50px;
+    // margin-top: -50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: auto;
-    left: 49%;
-    top: 40%;
-    margin-left: -50px;
-    margin-top: -50px;
-    img {
-      height: 30%;
-      width: auto;
-      border-radius: 100%;
-      margin-left: -40px;
-
+    text-align: center;
+    p {
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+    .avatar {
+        height: 300px;
+        width: 300px;
+        // width: auto;
+        border-radius: 100%;
+    }
+    .upload {
+        padding: 10px;
+    }
+    .fitbit-link {
+        // width: 500px;
+        // height: 100px;
+        background-color: #fff;
+        padding: 25px;
+        margin: 20px;
+        border-radius: 10px;
+        h3 {
+            padding: 0;
+            margin: 0;
+            font-size: 28px;
+            color: #BF392e;
+        }
+        a {
+            width: 500px;
+            height: 100px;
+            padding: 20px;
+        }
+        .fb-logo {
+            width: auto;
+            height: 50px;
+            margin: 20px;
+        }
+    }
+    .edit-settings {
+        // border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #ffffff
     }
     .information {
-      text-align: center;
-      margin-left: -40px;
-      padding-top: 1%;
-      border-radius: 100%;
-      font-size: 16px;
-      font-family: 'Lato';
+        // text-align: center;
+        // margin-left: -40px;
+        // padding-top: 1%;
+        // border-radius: 100%;
+        // font-size: 16px;
+        // font-family: 'Lato';
     }
-    input[type=submit] {
-      border-style: none;
-      border-radius: 5px;
-      background-color: #BF392e;
-      color: #ffffff;
-      font-size: 16px;
-      font-family: 'Lato';
-      height: 20%;
-      width: 120%;
-      margin-left: -34px;
-    }
+    // input[type=submit] {
+    //     border-style: none;
+    //     border-radius: 5px;
+    //     background-color: #BF392e;
+    //     color: #ffffff;
+    //     font-size: 16px;
+    //     font-family: 'Lato';
+    //     height: 20%;
+    //     width: 120%;
+    //     margin-left: -34px;
+    // }
 }
 
-.user-profile-edit {
-  position: absolute;
-  align-items: center;
-  height: 100%;
-  width: auto;
-  left: 49%;
-  top: 39%;
-  margin-left: -50px;
-  margin-top: -50px;
-  img {
-    height: 30%;
-    width: auto;
-    margin-left: -38px;
-  }
-  .information {
-    margin-left: -18px;
-  }
-  .upload {
-    margin-left: -18px;
-  }
-  input[type=submit] {
-    border-style: none;
-    border-radius: 5px;
-    background-color: #BF392e;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: 'Lato';
-    height: 20%;
-    width: 70%;
-    margin-left: -45px;
-  }
-}
-img {
-    height: 100%;
-    width: 200px;
-    padding-left: 7%;
-}
+// .user-profile-edit {
+//     position: absolute;
+//     align-items: center;
+//     height: 100%;
+//     width: auto;
+//     left: 49%;
+//     top: 39%;
+//     margin-left: -50px;
+//     margin-top: -50px;
+//     img {
+//         height: 30%;
+//         width: auto;
+//         margin-left: -38px;
+//     }
+//     .information {
+//         margin-left: -18px;
+//     }
+//     .upload {
+//         margin-left: -18px;
+//     }
+//     input[type=submit] {
+//         border-style: none;
+//         border-radius: 5px;
+//         background-color: #BF392e;
+//         color: #ffffff;
+//         font-size: 16px;
+//         font-family: 'Lato';
+//         height: 20%;
+//         width: 70%;
+//         margin-left: -45px;
+//     }
+// }
+// img {
+//     height: 100%;
+//     width: 200px;
+//     padding-left: 7%;
+// }

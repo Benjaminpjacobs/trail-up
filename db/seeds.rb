@@ -181,7 +181,7 @@ class Seed
   end
 
   def make_friends(user)
-    20.times do |i|
+    (User.count - 1).times do |i|
       user.friends << User.offset(i).first
     end
   end

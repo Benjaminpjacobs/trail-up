@@ -1,6 +1,6 @@
 # Trail Up! The social hiking app
 
-## The solution for the social hiker. 
+## A solution for the social hiker. 
 
 The live version of the site can be found [here](https://trail-up.herokuapp.com).
 

@@ -22,7 +22,7 @@ In addition to a Rails backend TrailUp utilizes:
 
 To run locally(assuming the install of rails and ruby):
 * Clone down the repo
-* CD into project directory
+* ```cd``` into project directory
 * ```Bundle```
 * ```Rake db:setup```
 * Run on localhost:3000 with ```Rails server```

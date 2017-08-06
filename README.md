@@ -1,7 +1,7 @@
 # Trail Up! The social hiking app
 
-![alt text](https://github.com/benjaminpjcobs/screen_shots/TrailUpSS1.jpeg)
-![alt text](https://github.com/benjaminpjcobs/screen_shots/TrailUpSS2.jpeg)
+![alt text](https://github.com/Benjaminpjacobs/trail-up/tree/master/screen_shots/TrailUpSS1.jpeg)
+![alt text](https://github.com/Benjaminpjacobs/trail-up/tree/master/screen_shots/TrailUpSS2.jpeg)
 
 Trail Up allows users to browse from thousands of trails across North America and create hiking events, and connect with other outdoor enthusiasts.
 
